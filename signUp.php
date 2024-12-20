@@ -44,6 +44,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="sign.css">
+    <script src="sign.js" defer></script>
 </head>
 <body>
     <div class="signUp-page">
@@ -79,25 +80,14 @@ $conn->close();
                     <input type="password" name="confirm_password" placeholder="Confirm your password" required>
                 </div>
 
-                <!-- Account Type (Seller or Buyer) -->
-                <div class="options">
-                    <div>
-                        <input id="Seller" type="radio" value="Seller" name="type" required>
-                        <label for="Seller">Seller</label>
-                    </div>
-                    <div>
-                        <input id="Buyer" type="radio" value="Buyer" name="type" required>
-                        <label for="Buyer">Buyer</label>
-                    </div>
-                </div>
-
                 <!-- Sign Up Button -->
                 <button type="submit" class="SignUp-btn">Sign Up</button>
             </form>
 
             <!-- Display success or error messages -->
-            <p>
-                Already have an account? <a href="login.php">Log In</a>
+            <p class="google">
+                Or Sign up with <a href="#"></a>
+                
             </p>
         </div>
     </div>
