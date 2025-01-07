@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Ad</title>
+    <link rel="stylesheet" href="postad.css">
+    <script src="postad.js" defer></script>
+    <!DOCTYPE html>
+<body>
+    <div class="Home Made-page">
+        <!-- شريط العنوان -->
+        <header class="header">
+            <h1 class="logo">HOME MADE </h1>
+            <div class="search-bar">
+                <img src="icons/search icon.svg" alt="search icon">
+                <input type="text" placeholder="Hinted search text" required>
+            </div>
+            <div class="images-bar">
+                <a href="home-3.html">
+                    <img src="icons/Home.svg" alt="home" width="20" height="20">
+                </a>
+                <img src="icons/Shopping cart.svg" alt="Shopping" width="20" height="20">
+                <img src="icons/list.svg" alt="list" width="20" height="20">
+                <img src="icons/Feedback.svg" alt="Feedback" width="20" height="20">
+                <img src="icons/BOT.svg" alt="BOT" width="20" height="20">
+                <img src="icons/User.svg" alt="user" width="20" height="20">
+            </div>
+        </header>
+</head>
+<body>
+    <main class="main">
+        <h2>Post Your Ad</h2>
+        <form class="ad-form" action="post_ad.php" method="POST" enctype="multipart/form-data">
+            <label>
+                Upload Images
+                <input type="file" name="images[]" accept="image/*" multiple>
+            </label>
+
+            <label>
+                Choose a Category
+                <select name="category">
+                    <option value="">Select Category</option>
+                    <option value="category1">Resin</option>
+                    <option value="category2">Pride</option>
+                    <option value="category3">Concrete</option>
+                    <option value="category4">Mirrors</option>
+                    <option value="category5">Skin Care</option>
+                    <option value="category6">Knitting</option>
+                    <option value="category7">Beads</option>
+                    <option value="category8">Khos</option>
+                    <option value="category9">Stainless</option>
+                    <option value="category10">Embroidery</option>
+                    <option value="category11">Candles</option>
+                    <option value="category12">Other</option>
+                  
+                </select>
+            </label>
+
+            <label>
+                Ad Title
+                <input type="text" name="title" placeholder="Enter ad title">
+            </label>
+            <div class="price-container">
+                <label for="price" class="price-label">Price</label>
+                <input type="number" id="price" name="price" placeholder="EGP |">
+            </div>
+                <div class="checkbox-section">
+                    <p>We will take 20% for displaying your ad on our website Home Made.</p>
+                    <h3></h3>
+                    <label class="agree">
+                        <input type="checkbox" id="agree-checkbox"> Agree 
+                    </label>
+                    
+                </div>
+    
+            
+           
+            </label>
+
+            <div class="buttons">
+                <button type="reset" class="cancel">Cancel</button>
+            
+                <button type="submit" class="post">Post Now</button>
+                
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="main-container">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+             
+      
+                <div class="col">
+                    <div class="head-title">
+                        <h2>Basic Links</h2>
+                    </div>
+                    <div class="content">
+                      <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contacr Us</a></li>
+                    </ul>   
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="head-title">
+                        <h2>social Media</h2>
+                    </div>
+                    <div class="content">
+                    <div class="social-icons">
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="icons/Facebook.svg" alt="Facebook" class="icon">
+                      </a>
+                      <a href="https://instagram.com" target="_blank">
+                        <img src="icons/Instagram.svg" alt="Instagram" class="icon">
+                      </a>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="icons/Twitter.svg" alt="Twitter" class="icon">
+                      </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="head-title">
+                        <h2>Contact Information</h2>
+                    </div>
+                    <div class="content">
+                      
+                      <div class="info-item">
+                        <img src="icons/phone.svg" alt="Phone" class="icon">
+                        <p> 0000 0000 0000</p>
+                      </div>
+                      
+                      <div class="info-item">
+                        <img src="icons/Email.svg" alt="Email" class="icon">
+                        <a href="mailto:homemade123@gmail.com" class="link">homemade123@gmail.com</a>
+                      </div>
+                      
+                      <div class="info-item">
+                        <img src="icons/location_on.svg" alt="Location" class="icon">
+                        <p> We are located in Cairo, Fayoum</p>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+            </div>
+           
+  
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+                <div class="payment-method">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-cc-visa"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-cc-mastercard"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-cc-paypal"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-cc-amex"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-cc-amazon-pay"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Copyright ©2024 All rights reserved| This template is made with<i
+                            class="fa-solid fa-heart"></i> by <a href="#">Craft Team</a></p>
+                </div>
+            </div>
+            <!-- Footer Bottom End -->
+        </div>
+    </footer>
+</body>
+</html>
