@@ -1,0 +1,118 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6fa;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لأن الصفحة بالعربي */
+}
+
+/* الحاوية الرئيسية */
+.sidebar-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    width: 220px;
+    background-color: #a94b00;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #f5f6fa;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #a94b00;
+}
+
+/* قسم المحتوى */
+.content-sec {
+    flex: 1;
+    background-color: white;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+/* عنوان المحتوى */
+.content-sec h2 {
+    margin-bottom: 20px;
+    color: #a94b00;
+    font-weight: 700;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #a94b00;
+}
+
+table th {
+    background-color:#a94b00;
+    color: white;
+    font-weight: 700;
+}
+
+/* صور المنتجات */
+table img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* زر الحذف */
+a.delet {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #a94b00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+a.delet:hover {
+    background-color:  #7a3400;
+}
+
+/* رسالة لا توجد منتجات */
+td[colspan="5"] {
+    text-align: center;
+    font-weight: 600;
+    color: #718093;
+    padding: 20px 0;
+}
