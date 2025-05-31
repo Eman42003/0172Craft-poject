@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4ede4;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #734d26;
+}
+
+.nav-icons img {
+    width: 24px;
+    margin: 0 10px;
+}
+
+/* Cart Section */
+.cart {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cart-status h1 {
+    font-size: 2.2em;
+    margin: 20px 0 10px;
+    color: #555;
+}
+
+.cart-icon {
+    width: 80px;
+    margin-top: 10px;
+}
+
+/* Cart Table Styling */
+.cart-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    font-size: 1em;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f4ede4;
+    color: #734d26;
+    font-weight: bold;
+}
+
+.cart-table img {
+    max-width: 60px;
+    border-radius: 50%;
+}
+
+
