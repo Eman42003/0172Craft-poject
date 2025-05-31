@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 10%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #e0e0e0;
+    color: #f9f8f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #f9f8f4;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 70%;
+    max-width: 400px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a94b00;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a94b00;
+  }
+  input[type="email"],
+  input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #a94b00;
+    background-color: #fffbfb;
+    color: #a94b00;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  input::placeholder {
+    color: #999;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .links a {
+    color: #a94b00;
+    text-decoration: none;
+  }
+  .links a:hover {
+    color: #4e342e;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #a94b00;
+    color: #e0e0e0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: #a8220360;
+    transform: scale(0.95);
+  }
+  .divider-wrapper {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 24px 0 0;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+  .divider-wrapper:before, .divider-wrapper::after {
+    content: "";
+    border-bottom: 1px solid #fff;
+    flex: 1 0 auto;
+    height: .5em;
+  }
+  .divider {
+    text-align: center;
+    flex: .2 0 auto;
+    margin: 0 10px;
+    height: 12px;
+  }
+  .social-section{
+    width: 20px;
+    height: 20px;
+    padding: 24px 0 0;
+    display: inline-block;
+    
+   }
+  .social-btn {
+    position: relative;
+    width: 400px;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 16px;
+    align-items: center;
+    background-color: #a94b00;
+    height: 52px;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    display: flex;
+    outline: 0;
+    padding-left: 52px;
+  }
+  .social-logo-wrapper {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+  }
+  .social-logo {
+    width: 20px;
+    height: 20px;
+  }
+  .social-text {
+    text-align: left;
+    position: relative;
+    }
