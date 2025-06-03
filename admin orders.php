@@ -8,21 +8,20 @@
 <body>
 
 <?php
-// الاتصال بقاعدة البيانات
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "graduation_project";
-
-// إنشاء الاتصال
+    
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال
+
 if ($conn->connect_error) {
     die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
 }
 
-// الاستعلام لجلب الطلبات مع أسماء المستخدمين وبيانات المنتجات + رقم الهاتف + معرف العنصر للحذف
+
 $sql = "
    SELECT 
     orders.order_date, 
@@ -45,7 +44,7 @@ if (!$result) {
     die("حدث خطأ في الاستعلام: " . $conn->error);
 }
 
-// عرض النتائج
+
 echo "<h2>user-orders</h2>";
 echo "<table border='1' cellpadding='10' cellspacing='0'>
         <tr>
