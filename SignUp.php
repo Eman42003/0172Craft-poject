@@ -1,7 +1,7 @@
 <?php
-require_once('config.php'); // الاتصال بقاعدة البيانات
+require_once('config.php');
 
-session_start(); // بدء الجلسة
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $full_name = $_POST['full_name'];
@@ -10,23 +10,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirm_password = $_POST['confirm_password'];
     $type = $_POST['submit'];
 
-    // التحقق من تطابق كلمات المرور
+    
     if ($password != $confirm_password) {
         echo "كلمات المرور غير متطابقة!";
         exit();
     }
 
-    // تشفير كلمة المرور
+    
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // استعلام الإدخال
+
     $sql = "INSERT INTO ills (FullName, Email, PasswordHash, Type) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssss", $full_name, $email, $hashed_password, $type);
 
     if ($stmt->execute()) {
         echo "تم التسجيل بنجاح!";
-        header("Location: login.php"); // إعادة التوجيه لصفحة تسجيل الدخول
+        header("Location: login.php"); 
         exit();
     } else {
         echo "حدث خطأ أثناء التسجيل: " . $stmt->error;
