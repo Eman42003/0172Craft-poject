@@ -19,7 +19,7 @@ include 'conf.php';
       font-family: 'Poppins', sans-serif;
       background: #e0e0e0;
       margin: 0;
-      padding-top: 70px; /* header height */
+      padding-top: 70px; 
     }
      header {
             background-color: white;
