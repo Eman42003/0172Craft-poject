@@ -1,21 +1,21 @@
 <?php
 session_start();
 
-// تفاصيل الاتصال بقاعدة البيانات
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "graduation_project";
 
-// إنشاء الاتصال
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال
+
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
 
-// حذف المنتج لو فيه delete_id
+
 if (isset($_GET['delete_id'])) {
     $id = intval($_GET['delete_id']);
     $delete_sql = "DELETE FROM products WHERE id = $id";
