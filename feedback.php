@@ -1,5 +1,5 @@
 <?php
-// feedback.php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli("localhost", "root", "", "graduation_project");
 
@@ -67,9 +67,7 @@ include 'conf.php';
         }
         .logo-icon {
             font-size: 36px;
-           /* font-weight: bold;*/
             color: #a94b00;
-            /*margin-right: 8px;*/
             text-shadow: 0 0 10px #f77307;
         }
         .logo-text h1 {
@@ -102,8 +100,6 @@ include 'conf.php';
         nav {
             display: flex;
             align-items: center;
-            /*gap: 20px;
-            flex-direction: row-reverse;*/
         }
         nav a {
             font-size: 18px;
@@ -116,7 +112,7 @@ include 'conf.php';
             color: #ccc;
         }
          
-        /* Dropdown Menu Styles */
+        
         #listMenu {
             display: none;
             position: absolute;
@@ -202,7 +198,7 @@ include 'conf.php';
         .error {
             color: red;
         }
-        /* Footer */
+        
     footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
@@ -306,10 +302,10 @@ include 'conf.php';
     <nav class="d-flex align-items-center gap-4">
         
         
-           <!-- Home -->
+         
         <a href="index.php" class="fa-solid fa-house"></a>
  &nbsp;|&nbsp;&nbsp;&nbsp;
-        <!-- Cart -->
+       
         <a href="cart.php" class="fa-solid fa-cart-shopping"></a>
          &nbsp;|&nbsp;&nbsp;&nbsp;
         <a href="#"><i class="fa-solid fa-list" style="color: #a94b00;" onclick="toggleListMenu()"></i></a>
