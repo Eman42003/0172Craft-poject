@@ -1,5 +1,5 @@
 <?php
-// اتصال بقاعدة البيانات
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -14,12 +14,12 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['order_item_id'])) {
     $order_item_id = intval($_POST['order_item_id']);
 
-    // حذف العنصر من order_items
+    
     $sql = "DELETE FROM order_items WHERE id = $order_item_id";
 
     if ($conn->query($sql) === TRUE) {
-        // نجاح الحذف، إعادة التوجيه إلى صفحة الطلبات
-        header("Location: admin orders.php"); // عدل حسب اسم صفحة العرض عندك
+        
+        header("Location: admin orders.php"); 
         exit;
     } else {
         echo "حدث خطأ أثناء الحذف: " . $conn->error;
