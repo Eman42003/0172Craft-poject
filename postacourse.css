@@ -75,62 +75,62 @@ button:hover {
     box-shadow: 0 2px 4px rgba(170, 102, 13, 0.856);
   }
   .search-bar {
-    display: flex; /* استخدام Flexbox لترتيب العناصر جنبًا إلى جنب */
-    align-items: center; /* محاذاة العناصر عموديًا */
+    display: flex; 
+    align-items: center;
     color: #fff;
-    background-color: #91410D; /* لون الخلفية */
-    border-radius: 20px; /* جعل الحواف دائرية */
-    padding-left: 4px; /* مسافة من اليسار */
-    width: 300px; /* عرض الحقل */
+    background-color: #91410D; 
+    border-radius: 20px; 
+    padding-left: 4px;
+    width: 300px;
     height: 30px;
     
   
   }
   
   .search-bar img {
-    width: 20px; /* حجم الأيقونة */
-    height: 20px; /* حجم الأيقونة */
-    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
   }
   
   .search-bar input {
-    width: 100%; /* يجعل input يملأ المساحة المتاحة */
-    border: none; /* إزالة الإطار الافتراضي */
-    background-color: transparent; /* خلفية شفافة */
-    color: #fff; /* لون النص */
-    font-family: 'Times New Roman', Times, serif; /* نوع الخط */
-    font-size: 14px; /* حجم الخط */
-    outline: none; /* إزالة الخط عند التحديد */
-    padding: 8px; /* مسافة داخلية */
+    width: 100%; 
+    border: none;
+    background-color: transparent; 
+    color: #fff; 
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 14px; 
+    outline: none; 
+    padding: 8px; 
   }
   
-  /* تنسيق النص داخل حقل البحث */
+  
   .search-bar input::placeholder {
-    color: #faf8f8; /* تغيير لون النص placeholder */
+    color: #faf8f8; 
     font-style: italic
   }
   
   .images-bar {
-    display: flex; /* عرض الأيقونات أفقيًا */
-    gap: 20px; /* مسافة بين كل أيقونة */
+    display: flex; 
+    gap: 20px; 
     font-size: 18px;
     cursor: pointer;
     padding-right: 20px;
   }
   
   .icon-bar span:hover {
-    color: #ffc107; /* تغيير لون الأيقونة عند التمرير */
+    color: #ffc107; 
     transition: color 0.3s ease;
     gap: 25px;
   }
   header {
 
-    position: fixed; /* يجعل العنصر ثابتًا */
-    top: 0; /* يثبته في أعلى الصفحة */
-    left: 0; /* يبدأ من أقصى اليسار */
-    width: 100%; /* يملأ عرض الصفحة بالكامل */
-    z-index: 1000; /* يجعله فوق باقي العناصر */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 
 width:fixed (1.440%);
 height: 40px;;
@@ -161,15 +161,14 @@ color: #7B411D;
 .header.search-bar {
 color: #e7dfd8;
 }
-/* الصورة (Banner) */
+
 .banner img {
 width: 100%;
-max-height: 400px; /* تحديد الحد الأقصى للارتفاع */
+max-height: 400px; 
 height: auto;
 display: block;
 margin: 1px 0;
 }
-/* تنسيق البوكس مع الكلمة والأيقونة */
 .icon-box {
 display: flex;
 align-items: center;
@@ -178,36 +177,36 @@ background-color: #91410D;
 border: 1px solid #ddd;
 border-radius: 20px;
 padding: 10px;
-width: 200px; /* تحديد عرض الصندوق */
-position: absolute; /* جعله عائماً */
-left: 0px; /* تثبيته على الحافة اليسرى */
-top: 420px; /* المسافة من أعلى الصفحة */
-margin: 0; /* إزالة المسافات */
-z-index: 10; /* جعله فوق بقية العناصر */
+width: 200px; 
+position: absolute; 
+left: 0px; 
+top: 420px; 
+margin: 0; 
+z-index: 10; 
 }
 
-/* الأيقونة داخل البوكس */
+
 .icon {
 width: 20px;
 height: 20px;
-margin-right: 200px; /* المسافة بين الأيقونة والنص */
+margin-right: 200px; 
 }
 
-/* النص داخل البوكس */
+
 .text {
 font-size: 24px;
 color: #fff;
 }
 footer {
-    position: relative; /* تغيير position إلى relative للتوافق مع أجهزة مختلفة */
+    position: relative; 
     bottom: 0px;
     width: 100%;
     background: #fff;
     border-top: 3px solid #fff;;
-    z-index: 10; /* ضمان أن الـ footer يظهر فوق العناصر الأخرى */
+    z-index: 10; 
   }
   
-  /* Footer Top Start */
+  
   .footer-top {
     display: flex;
     flex-wrap: wrap;
@@ -273,9 +272,7 @@ footer {
     color: #d10024;
     margin-right: 5px;
   }
-  /* Footer Top End */
   
-  /* Footer Bottom Start */
   .footer-bottom {
     background: #DBD6CC;
     padding: 15px 6%;
@@ -326,9 +323,7 @@ footer {
   .footer-bottom .copyright a:hover {
     color: #d10024;
   }
-  /* Footer Bottom End */
   
-  /* Device Responsive Start */
   @media (max-width: 760px) {
     .footer-top .col {
       flex-basis: 50%;
@@ -337,7 +332,7 @@ footer {
   
   @media (max-width: 490px) {
     footer {
-      position: relative; /* لضمان تماسك التصميم على الشاشات الصغيرة */
+      position: relative; 
     }
     .footer-top .col {
       flex-basis: 100%;
