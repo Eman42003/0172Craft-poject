@@ -1,19 +1,19 @@
-/* تنسيق عام للصفحة */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f6fa;
     margin: 0;
     padding: 0;
-    direction: rtl; /* لأن الصفحة بالعربي */
+    direction: rtl; 
 }
 
-/* الحاوية الرئيسية */
+
 .sidebar-container {
     display: flex;
     min-height: 100vh;
 }
 
-/* الشريط الجانبي */
+
 .sidebar {
     width: 220px;
     background-color: #a94b00;
@@ -51,7 +51,7 @@ body {
     background-color: #a94b00;
 }
 
-/* قسم المحتوى */
+
 .content-sec {
     flex: 1;
     background-color: white;
@@ -59,14 +59,14 @@ body {
     box-sizing: border-box;
 }
 
-/* عنوان المحتوى */
+
 .content-sec h2 {
     margin-bottom: 20px;
     color: #a94b00;
     font-weight: 700;
 }
 
-/* تنسيق الجدول */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -86,14 +86,14 @@ table th {
     font-weight: 700;
 }
 
-/* صور المنتجات */
+
 table img {
     max-width: 80px;
     height: auto;
     border-radius: 5px;
 }
 
-/* زر الحذف */
+
 a.delet {
     display: inline-block;
     padding: 6px 12px;
@@ -109,7 +109,7 @@ a.delet:hover {
     background-color:  #7a3400;
 }
 
-/* رسالة لا توجد منتجات */
+
 td[colspan="5"] {
     text-align: center;
     font-weight: 600;
