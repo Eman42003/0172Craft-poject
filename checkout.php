@@ -6,19 +6,19 @@ $username = "root";
 $password = "";
 $dbname = "graduation_project";
 
-// إنشاء الاتصال بقاعدة البيانات
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
 }
 
-// لو السلة فاضية، رجع المستخدم
+
 if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
     header("Location: cart.php");
     exit();
 }
 
-// تأكد أن المستخدم مسجل دخول
+
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// التحقق من اكتمال بيانات الملف الشخصي
+
 $checkProfile = $conn->prepare("SELECT phone, address FROM profile WHERE user_id = ?");
 $checkProfile->bind_param("i", $user_id);
 $checkProfile->execute();
@@ -41,7 +41,7 @@ if ($checkProfile->num_rows > 0) {
 
 $checkProfile->close();
 
-// لو البيانات ناقصة، الرجوع لصفحة البروفايل
+
 if (empty($phone) || empty($address)) {
     $_SESSION['checkout_redirect'] = true;
     header("Location: profile.php?error=complete_profile");
@@ -53,12 +53,12 @@ $total = 0;
 $order_date = date("Y-m-d H:i:s");
 $status = "Pending";
 
-// حساب إجمالي السعر
+
 foreach ($_SESSION['cart'] as $item) {
     $total += $item['price'] * $item['quantity'];
 }
 
-// 1. إدخال الطلب في جدول orders
+
 $sql = "INSERT INTO orders (user_id, order_date, total_price, status) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
@@ -69,7 +69,7 @@ $stmt->execute();
 $order_id = $stmt->insert_id;
 $stmt->close();
 
-// 2. إدخال كل عنصر في جدول order_items
+
 foreach ($_SESSION['cart'] as $item) {
     $product_name = (string) $item['name'];
     $quantity = (int) $item['quantity'];
