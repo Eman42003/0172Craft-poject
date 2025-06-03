@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const postCourseButton = document.querySelector('.form-actions button:last-of-type');
 
     postAdButton.addEventListener('click', () => {
-        window.location.href = 'postad.html'; // قم بتعديل الرابط حسب الحاجة
+        window.location.href = 'postad.html'; 
     });
 
     postCourseButton.addEventListener('click', () => {
-        window.location.href = 'postcourse.html'; // قم بتعديل الرابط حسب الحاجة
+        window.location.href = 'postcourse.html'; 
     });
 
     const formFields = document.querySelectorAll('.form-group input, .form-group textarea');
