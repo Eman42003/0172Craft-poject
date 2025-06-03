@@ -1,14 +1,14 @@
 <?php
-// بدء الجلسة
+
 session_start();
 
-// تحقق من تسجيل الدخول ووجود user_id في الجلسة
+
 if (!isset($_SESSION['user_id'])) {
     die("الرجاء تسجيل الدخول أولاً.");
 }
 $user_id = $_SESSION['user_id'];
 
-// الاتصال بقاعدة البيانات
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,16 +16,16 @@ $dbname = "graduation_project";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال
+
 if ($conn->connect_error) {
     die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
 }
 
-// تعريف متغيرات لعرضها في الحقول
+
 $full_name = $email = $phone = $address = $about_you = "";
 $message = "";
 
-// جلب بيانات المستخدم إن وجدت
+
 $sql = "SELECT full_name, email, phone, address, about_you FROM profile WHERE user_id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
@@ -41,7 +41,7 @@ if ($result && $result->num_rows > 0) {
 }
 $stmt->close();
 
-// عند إرسال النموذج
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $full_name = trim($_POST['full_name']);
     $email = trim($_POST['email']);
@@ -49,11 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = trim($_POST['address']);
     $about_you = trim($_POST['aboutyou']);
 
-    // التحقق من صحة البريد الإلكتروني
+   
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $message = "البريد الإلكتروني غير صالح.";
     } else {
-        // منع الأكواد الخبيثة
+      
         $full_name = htmlspecialchars($full_name);
         $email = htmlspecialchars($email);
         $phone = htmlspecialchars($phone);
@@ -164,7 +164,7 @@ $conn->close();
             padding-top: 80px;
         }
 
-        /* Table and buttons styling */
+        
         .cart-table {
             width: 100%;
             border-collapse: collapse;
@@ -228,7 +228,7 @@ $conn->close();
             text-align: center;
         }
 
-        /* Dropdown Menu Styles */
+        
         #listMenu {
             display: none;
             position: absolute;
@@ -273,7 +273,7 @@ $conn->close();
             }
         }
         .form-container {
-    max-width: 1000px; /* أو حتى 850px حسب ما يناسب الشكل */
+    max-width: 1000px; 
     margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
@@ -289,7 +289,7 @@ $conn->close();
 }
 
 .form-container .profile-icon {
-    /*display: block;*/
+   
     margin: 0 auto 20px;
     width: 100px;
     height: 100px;
@@ -334,7 +334,7 @@ $conn->close();
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 10px; /* مسافة بين الأزرار */
+    margin-right: 10px; 
 }
 
 .form-actions button:hover {
@@ -381,14 +381,14 @@ $conn->close();
     
     padding: 80px;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgb(228, 182, 137); /* Stronger shadow for emphasis */
-    text-align: center; /* Center all content */
+    box-shadow: 0 10px 10px rgb(228, 182, 137); 
+    text-align: center; 
     height: 20;
     outline:1px solid #4e342e;
     background-color: #fffbfb;
     color: #a94b00;
 }
-/* Footer */
+
    footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
@@ -552,25 +552,25 @@ $conn->close();
             <form action="profile.php" method="post">
                 <img src="icons/Generic avatar login.svg" alt="user" width="90" height="90" />
 
-                <!-- Full Name -->
+                
                 <div class="input-line">
                     <img src="icons/full name.svg" alt="name" width="20" height="20" />
                     <input type="text" name="full_name" placeholder="full name" class="editable-line" required value="<?php echo htmlspecialchars($full_name); ?>" />
                 </div>
 
-                <!-- Email -->
+                
                 <div class="input-line">
                     <img src="icons/Email.svg" alt="email" width="20" height="20" />
                     <input type="email" name="email" placeholder="email" class="editable-line" required value="<?php echo htmlspecialchars($email); ?>" />
                 </div>
 
-                <!-- Phone -->
+                
                 <div class="input-line">
                     <img src="icons/phone.svg" alt="phone" width="20" height="20" />
                     <input type="tel" name="phone" placeholder="phone" class="editable-line" required value="<?php echo htmlspecialchars($phone); ?>" />
                 </div>
 
-                <!-- Address -->
+               
                 <div class="input-line">
                     <img src="icons/location_on.svg" alt="address" width="20" height="20" />
                     <input type="text" name="address" placeholder="address" class="editable-line" required value="<?php echo htmlspecialchars($address); ?>" />
