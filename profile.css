@@ -1,4 +1,4 @@
-/* Reset all default styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,16 +9,16 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     height: 100%;
-    background-color: #e0e0e0;  /* Light grey background */
-    color: #ccc;  /* Dark grey text color */
+    background-color: #e0e0e0; 
+    color: #ccc;  
   }
   
   a {
-    text-decoration: none;  /* Remove default underline from links */
-    color: inherit;  /* Links inherit color from their parent element */
+    text-decoration: none;  
+    color: inherit;  
   }
   
-  /* For mobile responsiveness */
+  
   @media (max-width: 768px) {
     html {
       font-size: 14px;
@@ -45,13 +45,13 @@
       z-index: 1000;
       border-bottom: 1px solid #ccc;
       border-radius: 0 0 8px 8px;
-      height: 60px; /* زودتها سنة صغيرة عشان التنسيق يبقى مريح */
+      height: 60px; 
   }
   
   .logo-container {
       display: flex;
       align-items: center;
-      flex: 1; /* عشان تاخد جزء كويس من المساحة */
+      flex: 1; 
   }
   
   header .logo-icon {
@@ -79,7 +79,7 @@
   .search-container {
       display: flex;
       justify-content: center;
-      flex: 2; /* تخلي الـ search bar في النص وتديها مساحة أكبر */
+      flex: 2;
   }
   
   .search-bar input {
@@ -96,8 +96,8 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      flex: 1; /* الجزء الخاص بالآيكونات */
-      gap: 20px; /* مسافات بين الأيقونات */
+      flex: 1; 
+      gap: 20px; 
       transform: scale(1.05);
     transition: color 0.3s, transform 0.3s;
   }
@@ -113,11 +113,11 @@
   }
   
     
-    /* Dropdown Menu Styles */
+    
     #listMenu {
       display: none;
       position: absolute;
-      top: 60px; /* حسب ارتفاع الهيدر عندك */
+      top: 60px; 
       right: 20px;
       background-color: #fffaf080;
       border: 1px solid #a94b00;
@@ -144,8 +144,7 @@
     }
     #listMenu ul li:hover {
       background-color: #a94b00;
-      color: rgba(255, 255, 255, 0.5); /* نص أبيض شفاف بنسبة 50% */
-      
+      color: rgba(255, 255, 255, 0.5); 
     
       border-radius: 8px;
     }
@@ -163,7 +162,7 @@
 }
 
 .form-container {
-    max-width: 1000px; /* أو حتى 850px حسب ما يناسب الشكل */
+    max-width: 1000px; 
     margin: 40px auto;
     padding: 20px;
     background-color: #fffbfb;
@@ -179,7 +178,7 @@
 }
 
 .form-container .profile-icon {
-    /*display: block;*/
+    
     margin: 0 auto 20px;
     width: 100px;
     height: 100px;
@@ -224,7 +223,7 @@
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 10px; /* مسافة بين الأزرار */
+    margin-right: 10px; 
 }
 
 .form-actions button:hover {
@@ -268,11 +267,11 @@
     width: 50%;
     max-width: 600px;
     margin: 90px auto;
-    background: #f9f8f4; /* White box */
+    background: #f9f8f4; 
     padding: 80px;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgb(228, 182, 137); /* Stronger shadow for emphasis */
-    text-align: center; /* Center all content */
+    box-shadow: 0 10px 10px rgb(228, 182, 137); 
+    text-align: center; 
     height: 20;
     outline:1px solid #4e342e;
     color:  #4e342e;
