@@ -67,7 +67,7 @@ if (isset($_POST['upload'])) {
         }
 
         if (move_uploaded_file($IMAGE_LOCATION, $IMAGE_UP)) {
-            // ✅ جملة INSERT بعد تضمين user_id
+            
             $INSERT = "INSERT INTO products (name, price, image, category_id, user_id)
                        VALUES ('$NAME', '$PRICE', '$IMAGE_UP', '$CATEGORY_ID', '$USER_ID')";
             $RESULT = mysqli_query($con, $INSERT);
