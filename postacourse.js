@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const online = form.querySelector("input[name='online']");
     const offline = form.querySelector("input[name='offline']");
     
-    // زر إلغاء (مسح البيانات المدخلة)
+    
     window.cancelForm = function () {
         form.reset();
         alert("تم مسح البيانات بنجاح!");
     };
 
-    // التحقق من صحة البيانات قبل الإرسال
+    
     form.addEventListener("submit", function (event) {
         let errorMessage = "";
 
