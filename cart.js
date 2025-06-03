@@ -1,9 +1,9 @@
-// البحث عن العناصر التي سنحتاجها
+
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartStatus = document.querySelector('.cart-status');
 let cartItems = [];
 
-// دالة لإضافة منتج إلى العربة
+
 function addToCart(event) {
     const productElement = event.target.closest('.product');
     const productName = productElement.querySelector('p').textContent;
@@ -18,7 +18,7 @@ function addToCart(event) {
     updateCart();
 }
 
-// دالة لتحديث عرض محتويات العربة
+
 function updateCart() {
     const cartContent = cartStatus.querySelector('h1');
     
@@ -30,7 +30,7 @@ function updateCart() {
     }
 }
 
-// دالة لعرض المنتجات في العربة
+
 function displayCartItems() {
     const cartItemsList = cartStatus.querySelector('ul') || document.createElement('ul');
     
@@ -47,7 +47,7 @@ function displayCartItems() {
     });
 }
 
-// ربط حدث الضغط على زر إضافة إلى العربة بكل الأزرار في الصفحة
+
 addToCartButtons.forEach(button => {
     button.addEventListener('click', addToCart);
 });
