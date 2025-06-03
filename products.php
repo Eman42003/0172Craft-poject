@@ -4,7 +4,7 @@ session_start();
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0
 ?>
 <?php
-// إعدادات الاتصال
+
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -115,7 +115,7 @@ mysqli_set_charset($con, "utf8");
             padding-top: 80px;
         }
 
-        /* Table and buttons styling */
+       
         .cart-table {
             width: 100%;
             border-collapse: collapse;
@@ -179,7 +179,7 @@ mysqli_set_charset($con, "utf8");
             text-align: center;
         }
 
-        /* Dropdown Menu Styles */
+        
         #listMenu {
             display: none;
             position: absolute;
@@ -224,7 +224,7 @@ mysqli_set_charset($con, "utf8");
             }
         }
 
-        /* Footer styles */
+      
         footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
