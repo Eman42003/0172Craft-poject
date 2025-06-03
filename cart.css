@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     margin: 0;
 }
 
-/* Header */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ body {
     margin: 0 10px;
 }
 
-/* Cart Section */
+
 .cart {
     text-align: center;
     margin: 20px 0;
@@ -52,7 +52,7 @@ body {
     margin-top: 10px;
 }
 
-/* Cart Table Styling */
+
 .cart-table {
     width: 90%;
     margin: 20px auto;
