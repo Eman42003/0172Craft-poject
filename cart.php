@@ -121,7 +121,7 @@ session_start();
             padding-top: 80px;
         }
 
-        /* Table and buttons styling */
+       
         .cart-table {
             width: 100%;
             border-collapse: collapse;
@@ -185,7 +185,7 @@ session_start();
             text-align: center;
         }
 
-        /* Dropdown Menu Styles */
+      
         #listMenu {
             display: none;
             position: absolute;
@@ -245,7 +245,7 @@ session_start();
     margin-top: 10px;
 }
 
-/* Cart Table Styling */
+
 .cart-table {
     width: 90%;
     margin: 20px auto;
