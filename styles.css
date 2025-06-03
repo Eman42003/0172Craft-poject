@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9; /* خلفية الصفحة */
+  background-color: #f9f9f9; 
 }
 
-/* تصميم شريط المهام */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@ body {
   box-shadow: 0 2px 4px #aa660dda;
 }
 
-/* تصميم الشعار */
+
 .logo {
   font-size: 20px;
   font-weight: 50px;
@@ -32,7 +32,7 @@ body {
 }
 
 
-/* إعدادات العنوان */
+
 header {
   width:fixed (1.440%);
   height: 30px;;
@@ -65,7 +65,7 @@ header {
   color: #e7dfd8;
 }
 
-/* حاوية تسجيل الدخول */
+
 .login-container {
   width: 80%;
   max-width: 300px;
@@ -79,14 +79,14 @@ header {
   outline:1px solid #391802;
 }
 
-/* أيقونة الملف الشخصي */
+
 .profile-icon img {
   width: 70px;
   height: 70px;
   margin-bottom: 20px;
 }
 
-/* حاوية كل عنصر (البريد وكلمة المرور) */
+
 .input-line {
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ header {
   margin-right: 10px;
 }
 
-/* إعدادات الحقل القابل للتحرير */
+
 .editable-line {
   flex: 1;
   outline: none;
@@ -116,13 +116,13 @@ header {
   position: relative;
   background: transparent;
   text-align: left;
-   /* إضافة خط تحت الحقل */
+   
   transition: border-color 0.3s ease;
 }
 
-/* النص الوهمي الذي يظهر في الحقل القابل للتحرير */
+
 .editable-line:empty::before {
-  content: attr(data-placeholder); /* النص الوهمي الذي يظهر داخل السطر */
+  content: attr(data-placeholder); 
   
   color: #8b471a;
   font-style: normal;
@@ -130,14 +130,14 @@ header {
   font-weight: bold;
 }
 
-/* تغيير التنسيق عند التركيز على الحقل */
+
 
 
 .editable-line:focus::before {
-  content: none; /* إزالة النص الوهمي عند الكتابة */
+  content: none; 
 }
 
-/* إعدادات خيارات أخرى */
+
 .options {
   display: flex;
   justify-content: space-between;
@@ -162,7 +162,7 @@ line-height: 40PX;
   text-decoration: underline;
 }
 
-/* زر تسجيل الدخول */
+
 .login-btn {
   width: 30%;
   padding: 5px;
@@ -179,7 +179,7 @@ line-height: 40PX;
   background-color: #8b5f52;
 }
 
-/* نص إنشاء حساب */
+
 .signup {
   font-size: 16px;
   color: #9f621b;
