@@ -1,4 +1,4 @@
-/* تنسيق الصفحة */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-/* تنسيق الهيدر */
+
 header {
     display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* مساحة تحت اللوجو */
+    margin-bottom: 10px; 
 }
 
 .logo-icon {
@@ -31,8 +31,8 @@ header {
 }
 
 .search-container {
-    margin-top: 10px; /* مساحة فوق شريط البحث وتحت اللوجو */
-    margin-bottom: 15px; /* مساحة تحت شريط البحث */
+    margin-top: 10px; 
+    margin-bottom: 15px; 
 }
 
 .search-bar input {
@@ -44,8 +44,8 @@ header {
 }
 
 nav {
-    margin-top: 20px; /* مساحة فوق القائمة وتحت شريط البحث */
-    display: flex; /* عشان عناصر القائمة تكون جنب بعض */
+    margin-top: 20px; 
+    display: flex; 
     align-items: center;
 }
 
@@ -61,23 +61,23 @@ nav a:hover {
 }
 
 nav .dropdown {
-    margin-left: 15px; /* مساحة على شمال القائمة المنسدلة */
+    margin-left: 15px; 
 }
 
 nav .dropdown a {
-    margin-right: 0; /* إزالة المارجن من رابط القائمة المنسدلة عشان ميزودش مساحة */
+    margin-right: 0; 
 }
 
-/* تنسيق حاوية الكورسات باستخدام Grid */
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* أقل عرض للكارت 280px وياخد 1fr من المساحة المتاحة */
-    gap: 20px; /* مساحة بين الكروت */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; 
     padding: 20px;
-    margin-top: 140px; /* زيادة المساحة تحت الهيدر عشان ميتغطاش بالكورسات */
+    margin-top: 140px; 
 }
 
-/* تنسيق الكارد */
+
 .card {
     background-color: #fff;
     border-radius: 8px;
@@ -114,13 +114,13 @@ nav .dropdown a {
     text-align: right;
 }
 
-/* تنسيق الـ footer */
+
 .footer {
     background-color: #a94b00;
     padding: 40px 20px;
     font-size: 14px;
     color: #fff;
-    margin-top: 40px; /* مساحة بين الكورسات والفوتر */
+    margin-top: 40px; 
 }
 
 .footer-container {
