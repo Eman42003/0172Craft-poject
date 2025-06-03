@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7f7f7;
     margin: 20px;
-    direction: rtl; /* لأن الصفحة بالعربي */
+    direction: rtl; 
 }
 
 h2 {
