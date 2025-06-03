@@ -1,25 +1,25 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root"; // اسم المستخدم لقاعدة البيانات
-$password = "";
-$dbname = "graduation_project"; // اسم قاعدة البيانات
 
-// Create connection
+$servername = "localhost";
+$username = "root"; 
+$password = "";
+$dbname = "graduation_project";
+
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
 
-// Initialize session
+
 session_start();
 
-// Check request method
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // تحقق من اختيار الشروط
+   
     if (!isset($_POST['terms'])) {
         $error_message = "يجب الموافقة على الشروط والأحكام للمتابعة.";
     } else {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = isset($_POST['password']) ? htmlspecialchars($_POST['password']) : null;
 
         if (!empty($email) && !empty($password)) {
-            // Find user by email
+            
             $sql = "SELECT * FROM ills WHERE Email = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s", $email);
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                // Verify password
+               
                 if (password_verify($password, $row['PasswordHash'])) {
                     // Login successful
                     $_SESSION['user_id'] = $row['id'];
