@@ -9,7 +9,7 @@
 <body>
 
     <div class="Home Made-page">
-        <!--                                                         شريط العنوان                                                    -->
+      
         <header class="header">
             <h1 class="logo">HOME MADE</h1>
             <form action="home.php" method="post" enctype="multipart/form-data">
@@ -47,10 +47,10 @@
     ?>
     <center>
         <div class="main">
-            <form action="update.php" method="post" enctype="multipart/form-data"><!--المالتلي دي علشان اقولو اني هاخد صوره للعربيه الي برفعها جديد ع الماركت-->
+            <form action="update.php" method="post" enctype="multipart/form-data">
                 <h2>Edit Product Information</h2>
                 <br>
-                <input type="text" name='id' value='<?php echo $DATA['Id']?>' style='display:none;'><!--انا هنا خفيت الانبوت بتاع الاي دي علشان محدش يلعب فيه وهو بيعدل العربيه كده كده حتي لو لعب فيه مش هيتغير ومش هيعمل ايرور-->
+                <input type="text" name='id' value='<?php echo $DATA['Id']?>' style='display:none;'>
                 <br>
                 <input type="text" name='name' class="uploadInput" value='<?php echo $DATA['Name']?>'>
                 <br>
