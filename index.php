@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conf.php'; // Database connection: $con = mysqli_connect(...);
+include 'conf.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +86,7 @@ include 'conf.php'; // Database connection: $con = mysqli_connect(...);
       transform: scale(1.3) rotate(5deg);
     }
 
-    /* Dropdown */
+   
        #listMenu {
             display: none;
             position: absolute;
@@ -113,7 +113,7 @@ include 'conf.php'; // Database connection: $con = mysqli_connect(...);
         #listMenu li:hover {
             color: #a94b00;
         }
-    /* Container and Cards */
+   
     .container {
     position: relative;
     width: 100%;
@@ -168,7 +168,7 @@ include 'conf.php'; // Database connection: $con = mysqli_connect(...);
     z-index: 1;
   }
 
-  /* Responsive adjustments */
+  
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -237,7 +237,7 @@ include 'conf.php'; // Database connection: $con = mysqli_connect(...);
       background-color: #8a3d00;
     }
 
-    /* Footer */
+    
     footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
@@ -402,21 +402,20 @@ include 'conf.php'; // Database connection: $con = mysqli_connect(...);
   </div>
 </div>
 <<?php
-// إعدادات الاتصال
-$host = "localhost";      // اسم المضيف (غالبًا localhost)
-$username = "root";       // اسم المستخدم لقاعدة البيانات
-$password = "";           // كلمة مرور قاعدة البيانات (اتركها فارغة في السيرفر المحلي مثل XAMPP)
-$database = "graduation_project";   // اسم قاعدة البيانات التي أنشأتها
 
-// الاتصال بقاعدة البيانات
+$host = "localhost";      
+$username = "root";       
+$password = "";          
+$database = "graduation_project";   
+
 $con = mysqli_connect($host, $username, $password, $database);
 
-// التحقق من الاتصال
+
 if (!$con) {
     die("فشل الاتصال بقاعدة البيانات: " . mysqli_connect_error());
 }
 
-// لضبط الترميز على UTF-8 لتجنب مشاكل اللغة العربية
+
 mysqli_set_charset($con, "utf8");
 ?>
 
