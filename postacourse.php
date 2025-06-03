@@ -85,7 +85,7 @@ session_start();
             padding-top: 80px;
         }
 
-        /* Table and buttons styling */
+        
         .cart-table {
             width: 100%;
             border-collapse: collapse;
@@ -149,7 +149,7 @@ session_start();
             text-align: center;
         }
 
-        /* Dropdown Menu Styles */
+      
         #listMenu {
             display: none;
             position: absolute;
@@ -194,7 +194,7 @@ session_start();
             }
         }
 
-        /* Footer styles */
+        
         footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
@@ -571,7 +571,7 @@ button:hover {
     </form>
   </main>
 
-             <!-- Footer Top Start -->
+             
   
 <footer>
   <div class="footer-container">
@@ -614,7 +614,7 @@ button:hover {
 </html>
 
 <?php
-// الاتصال بقاعدة البيانات
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -631,7 +631,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = htmlspecialchars(trim($_POST['phone']));
     $address = htmlspecialchars(trim($_POST['address']));
     
-    // التعامل مع الفيديو
+  
     $video_path = "";
     if (isset($_FILES['video']) && $_FILES['video']['error'] == 0) {
         $video_tmp = $_FILES['video']['tmp_name'];
