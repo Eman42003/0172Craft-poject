@@ -1,13 +1,13 @@
 <?php
-// اتصال بقاعدة البيانات
+
 $conn = new mysqli("localhost", "root", "", "graduation_project");
 
-// تحقق من الاتصال
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// جلب الكورسات من قاعدة البيانات
+
 $sql = "SELECT * FROM courses ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
@@ -93,7 +93,7 @@ session_start();
             padding-top: 80px;
         }
 
-        /* Table and buttons styling */
+        
         .cart-table {
             width: 100%;
             border-collapse: collapse;
@@ -157,7 +157,7 @@ session_start();
             text-align: center;
         }
 
-        /* Dropdown Menu Styles */
+        
         #listMenu {
             display: none;
             position: absolute;
@@ -202,8 +202,8 @@ session_start();
             }
         }
         nav {
-    margin-top: 20px; /* مساحة فوق القائمة وتحت شريط البحث */
-    display: flex; /* عشان عناصر القائمة تكون جنب بعض */
+    margin-top: 20px; 
+    display: flex; 
     align-items: center;
 }
 
@@ -219,23 +219,23 @@ nav a:hover {
 }
 
 nav .dropdown {
-    margin-left: 15px; /* مساحة على شمال القائمة المنسدلة */
+    margin-left: 15px; 
 }
 
 nav .dropdown a {
-    margin-right: 0; /* إزالة المارجن من رابط القائمة المنسدلة عشان ميزودش مساحة */
+    margin-right: 0; 
 }
 
-/* تنسيق حاوية الكورسات باستخدام Grid */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* أقل عرض للكارت 280px وياخد 1fr من المساحة المتاحة */
-    gap: 20px; /* مساحة بين الكروت */
+    gap: 20px;
     padding: 20px;
-    margin-top: 140px; /* زيادة المساحة تحت الهيدر عشان ميتغطاش بالكورسات */
+    margin-top: 140px; 
 }
 
-/* تنسيق الكارد */
+
 .card {
     background-color: #fff;
     border-radius: 8px;
@@ -272,7 +272,7 @@ nav .dropdown a {
     text-align: right;
 }
 
-/* Footer */
+
    footer {
       background-color: #f0f0f0;
       padding: 40px 20px;
@@ -419,14 +419,14 @@ nav .dropdown a {
        while($row = $result->fetch_assoc()) {
     echo '<div class="card">';
 
-    // عرض الفيديو بدل الصورة لو موجود
+   
     if (!empty($row["video_path"]) && file_exists($row["video_path"])) {
         echo '<video controls width="100%" height="200" style="border-radius: 8px;">
                 <source src="' . htmlspecialchars($row["video_path"]) . '" type="video/mp4">
                 المتصفح لا يدعم عرض الفيديو.
               </video>';
     } else {
-        // عرض الصورة إذا الفيديو غير موجود
+       
         echo '<img src="icons/user course.png" alt="user" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">';
     }
 
