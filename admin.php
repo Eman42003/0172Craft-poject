@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-// تفاصيل الاتصال بقاعدة البيانات
-$servername = "localhost";
-$username = "root"; // اسم المستخدم لقاعدة البيانات
-$password = "";
-$dbname = "graduation_project"; // اسم قاعدة البيانات
 
-// إنشاء الاتصال
+$servername = "localhost";
+$username = "root"; 
+$password = "";
+$dbname = "graduation_project"; 
+
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال
+
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
